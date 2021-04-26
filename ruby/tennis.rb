@@ -93,29 +93,26 @@ class TennisGame2
     p1res = ""
     p2res = ""
     if (@p1points > 0 and @p2points==0)
-      if (@p1points==1)
+      case @p1points
+      when 1
         p1res = "Fifteen"
-      end
-      if (@p1points==2)
+      when 2
         p1res = "Thirty"
-      end
-      if (@p1points==3)
+      else 3
         p1res = "Forty"
       end
       p2res = "Love"
       result = p1res + "-" + p2res
     end
     if (@p2points > 0 and @p1points==0)
-      if (@p2points==1)
+      case @p2points
+      when 1
         p2res = "Fifteen"
-      end
-      if (@p2points==2)
+      when 2
         p2res = "Thirty"
-      end
-      if (@p2points==3)
+      else 3
         p2res = "Forty"
       end
-      
       p1res = "Love"
       result = p1res + "-" + p2res
     end
